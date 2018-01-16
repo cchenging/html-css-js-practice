@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Function start</title>
+    <style>
+      .msgBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 240px;
+        background: #eee;
+      }
+      .msgBox p {
+        line-height: 1.5;
+        padding: 10px 20px;
+        color: #333;
+        padding-left: 82px;
+        background-position: 25px center;
+        background-repeat: no-repeat;
+      }
+      .msgBox button {
+        background: none;
+        background-color = 'red';
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.1rem;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+      <div>
+        <label for="message">Enter Message:</label>
+        <input id="msgtxt" type="text" placeholder="">
+      </div>
+  </body>
+  <script>
+      function displayMessage(msgText, msgType)
+      {
+          var html = document.querySelector('html');
+          var panel = document.createElement('div');
+          panel.setAttribute('class', 'msgBox');
+          html.appendChild(panel);
+
+          var msg = document.createElement('p');
+          msg.textContent = msgText;
+          panel.appendChild(msg);
+
+          var closeBtn = document.createElement('button');
+          console.log('msgType : ');
+          if(msgType == 'warn')
+          {
+              panel.style.backgroundColor = 'red';
+              msg.style.backgroundImage =  'url(icons/warning.png)';
+          }
+          else if (msgType == 'chat')
+          {
+              panel.style.backgroundColor = 'cyan';
+              msg.style.backgroundImage =  'url(icons/chat.png)';
+          }
+          else
+          {
+                  panel.style.backgroundColor = 'white';
+                  msg.style.paddingLeft = '20px';
+          }
+
+          closeBtn.textContent='x';
+          panel.appendChild(closeBtn);
+          closeBtn.onclick = function()
+          {
+              panel.parentNode.removeChild(panel);
+          }
+      }
+
+      function processButton()
+      {
+          displayMessage(document.getElementById('msgtxt').value, this.getAttribute('class'));
+      }
+      var html = document.querySelector('html');
+
+      var button_chat = document.createElement('button');
+      var button_warn = document.createElement('button');
+      button_chat.setAttribute('class', 'chat');
+      button_warn.setAttribute('class', 'warn');
+      button_chat.textContent = 'Enter Chat message';
+      button_warn.textContent = 'Enter Warning message';
+      html.appendChild(button_chat);
+      html.appendChild(button_warn);
+
+      var buttons = document.getElementsByTagName('button');
+      for(var i = 0; i < buttons.length; i++)
+      {
+          console.log(buttons.lengths);
+          buttons[i].addEventListener('click', processButton);
+      }
+  </script>
+</html>

@@ -1,0 +1,69 @@
+body
+{
+  max-width: 800px;
+}
+
+h1
+{
+
+}
+
+h2
+{
+
+}
+
+name, email, tel
+{
+  font-weight: bold;
+}
+
+sign
+{
+  display: block;
+   margin-top: 100px;
+}
+
+p.receiver-column, date.receiver-column
+{
+  text-align: right;
+}
+
+p.sender-column
+{
+  text-align: left;
+}
+
+motto
+{
+  font-style: italic;
+}
+
+/*Tooltip container*/
+.tooltip
+{
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+/*Tooltip text */
+.tooltip .tooltiptext
+{
+  visibility: hidden;
+  width: auto;
+  background-color: black;
+  color: #FFF;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 6px;
+
+  /* Position the tooltip text*/
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext
+{
+  visibility: visible;
+}

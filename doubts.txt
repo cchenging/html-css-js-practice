@@ -1,0 +1,6 @@
+Doubts
+  document.querySelector('p ul'); vs
+  document.querySelector('ul');
+  'p ul' doesn't work for some reason.
+
+  With Respect To ('C:\Users\priyanshu.d\html-css-practice\javascript-project-1\index.html')

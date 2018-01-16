@@ -1,0 +1,47 @@
+/* Statements and Expressions */
+
+// Expression                               [o]
+// Statement                                [o]
+// Variables                                [o]
+// Functions                                [o]
+// Scopes                                   [o]
+
+/* Values and Types */
+
+// String                                   [o]
+// Number                                   [o]
+// Boolean                                  [o]
+// null and undefined                       [o]
+// Object/Array                             [o]
+
+/* Basics */
+
+// Comparison                               [o]
+  // Equality                               [o]
+  // Inequality                             [o]
+// Scope                                    [o]
+// Conditionals                             [o]
+// Functions                                [o]
+// Closure                                  []
+// Modules/functions aka classes            []
+// this                                     []
+// Prototypes                               []
+
+/* Intermediate */
+// Asynchronous                             []
+// Callbacks                                []
+// Promise                                  []
+// ES6                                      []
+  // Arrows                                 []
+  // Classes                                []
+  // Template String                        []
+  // Destructuring                          []
+  // Default                                []
+  // Rest                                   []
+  // Spread                                 []
+  // let and const                          []
+  // ES6 Modules                            []
+
+
+AJAX basics, etc.
+Use W3Schools
